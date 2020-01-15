@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>在 windows 中透過構建虛擬機使用 linux 系統 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.60.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://gavin-yeh.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 windows 中透過構建虛擬機使用 linux 系統"/>
+<meta name="twitter:description" content="為什麼需要虛擬機？  我們從小到大都在使用 windows 的作業系統，但在程式開發時，各大公司或團隊最常使用的是 linux 系統，這時就可以用虛擬機，在 windows 中，建立一台虛擬機，然後虛擬機上是 linux 系統，可以用來進行學習與培訓
+ VVMware Workstation Player 免費的虛擬機軟體，是VMware Workstation（付費版本）的精簡版，安裝VMware Workstation Player之後，可以在你的電腦新增多部的虛擬機器（或稱「虛擬電腦」），在虛擬機器中可以安裝不同的作業系統，例如：Windows、Linux&hellip;等；也可以安裝任何的軟體，就好像在使用實體電腦一樣。
+下載 連結到官方網站，點選「下載」，選擇「免費產品下載」的「Workstation Player」 對著Windows的安裝版本，點選「立即下載」；如果你的作業系統是Linux，就下載適用於Linux的版本 下載完成以後，開啟檔案總管，對著下載的檔案連續按兩下滑鼠左鍵，準備進行安裝。 安裝 點選「Next」 選擇「I accept the terms in the License Agreement.」，點選「Next」。 勾選「Enhanced Keyboard Driver」，點選「Next」。 使用預設的選項，點選「Next」。如果你不想協助改善軟體就取消勾選「Join the VMware Customer Experience Improvement Program」。 使用預設選項，建立桌面捷徑與開始程式資料夾，點選「Next」。 點選「Install」。 正在安裝VMware Workstation Player。 安裝完成，點選「Finish」。 點選「Yes」，重新開機。 第一次啟動 對著桌面的捷徑圖示，連續按兩下滑鼠左鍵，開啟VMware Workstation 15 Player。 使用預設的選項，點選「Continue」，使用免費版本。 點選「Finish」。 建立虛擬機 VMware Workstation 15 Player開啟的視窗如圖示，點選「Create a New Virtual Machine」，可以建立虛擬機器，並在虛擬機器上安裝作業系統。 選擇稍後安裝作業系統，然後點擊「下一步」 選擇作業系統與作業系統版本，然後點擊「下一步」 可以修改虛擬機名稱與安裝路徑，然後點擊「下一步」 可以修改磁盤容量大小，並選擇虛擬磁盤儲存為單個文件，然後點擊「下一步」 &gt; 拆分磁盤後，可以更輕鬆的在計算機之間移動虛擬機，但可能會降低大容量磁盤的性能 點擊「完成」 點擊「編輯虛擬機設定」 在此介面可以自定義內存、CPU等大小，然後選中新CD/DVD，選擇剛才下載的鏡像文件，然後點擊「關閉」 使用 ISO 映像檔，並選擇檔案位置，點擊「完成」  linux 7 ISO 映像檔下載位置  安裝 linux  linux 有很多作業系統的版本，在這裡我用 centos 7."/>
+
+    <meta property="og:title" content="在 windows 中透過構建虛擬機使用 linux 系統" />
+<meta property="og:description" content="為什麼需要虛擬機？  我們從小到大都在使用 windows 的作業系統，但在程式開發時，各大公司或團隊最常使用的是 linux 系統，這時就可以用虛擬機，在 windows 中，建立一台虛擬機，然後虛擬機上是 linux 系統，可以用來進行學習與培訓
+ VVMware Workstation Player 免費的虛擬機軟體，是VMware Workstation（付費版本）的精簡版，安裝VMware Workstation Player之後，可以在你的電腦新增多部的虛擬機器（或稱「虛擬電腦」），在虛擬機器中可以安裝不同的作業系統，例如：Windows、Linux&hellip;等；也可以安裝任何的軟體，就好像在使用實體電腦一樣。
+下載 連結到官方網站，點選「下載」，選擇「免費產品下載」的「Workstation Player」 對著Windows的安裝版本，點選「立即下載」；如果你的作業系統是Linux，就下載適用於Linux的版本 下載完成以後，開啟檔案總管，對著下載的檔案連續按兩下滑鼠左鍵，準備進行安裝。 安裝 點選「Next」 選擇「I accept the terms in the License Agreement.」，點選「Next」。 勾選「Enhanced Keyboard Driver」，點選「Next」。 使用預設的選項，點選「Next」。如果你不想協助改善軟體就取消勾選「Join the VMware Customer Experience Improvement Program」。 使用預設選項，建立桌面捷徑與開始程式資料夾，點選「Next」。 點選「Install」。 正在安裝VMware Workstation Player。 安裝完成，點選「Finish」。 點選「Yes」，重新開機。 第一次啟動 對著桌面的捷徑圖示，連續按兩下滑鼠左鍵，開啟VMware Workstation 15 Player。 使用預設的選項，點選「Continue」，使用免費版本。 點選「Finish」。 建立虛擬機 VMware Workstation 15 Player開啟的視窗如圖示，點選「Create a New Virtual Machine」，可以建立虛擬機器，並在虛擬機器上安裝作業系統。 選擇稍後安裝作業系統，然後點擊「下一步」 選擇作業系統與作業系統版本，然後點擊「下一步」 可以修改虛擬機名稱與安裝路徑，然後點擊「下一步」 可以修改磁盤容量大小，並選擇虛擬磁盤儲存為單個文件，然後點擊「下一步」 &gt; 拆分磁盤後，可以更輕鬆的在計算機之間移動虛擬機，但可能會降低大容量磁盤的性能 點擊「完成」 點擊「編輯虛擬機設定」 在此介面可以自定義內存、CPU等大小，然後選中新CD/DVD，選擇剛才下載的鏡像文件，然後點擊「關閉」 使用 ISO 映像檔，並選擇檔案位置，點擊「完成」  linux 7 ISO 映像檔下載位置  安裝 linux  linux 有很多作業系統的版本，在這裡我用 centos 7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavin-yeh.github.io/blog/vm/" />
+<meta property="article:published_time" content="2020-01-15T15:03:13+08:00" />
+<meta property="article:modified_time" content="2020-01-15T15:03:13+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://gavin-yeh.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">在 windows 中透過構建虛擬機使用 linux 系統</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 15, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="heading">為什麼需要虛擬機？</h1>
+<blockquote>
+<p>我們從小到大都在使用 windows 的作業系統，但在程式開發時，各大公司或團隊最常使用的是 linux 系統，這時就可以用虛擬機，在 windows 中，建立一台虛擬機，然後虛擬機上是 linux 系統，可以用來進行學習與培訓</p>
+</blockquote>
+<h2 id="vvmware-workstation-player">VVMware Workstation Player</h2>
+<p>免費的虛擬機軟體，是VMware Workstation（付費版本）的精簡版，安裝VMware Workstation Player之後，可以在你的電腦新增多部的虛擬機器（或稱「虛擬電腦」），在虛擬機器中可以安裝不同的作業系統，例如：Windows、Linux&hellip;等；也可以安裝任何的軟體，就好像在使用實體電腦一樣。</p>
+<h3 id="heading1">下載</h3>
+<h4 id="workstation-player">連結到官方網站，點選「下載」，選擇「免費產品下載」的「Workstation Player」</h4>
+<p><img src="images/download_1.jpg" alt=""></p>
+<h4 id="windowslinuxlinux">對著Windows的安裝版本，點選「立即下載」；如果你的作業系統是Linux，就下載適用於Linux的版本</h4>
+<p><img src="images/download_2.jpg" alt=""></p>
+<h4 id="heading2">下載完成以後，開啟檔案總管，對著下載的檔案連續按兩下滑鼠左鍵，準備進行安裝。</h4>
+<p><img src="images/download_3.jpg" alt=""></p>
+<h3 id="heading3">安裝</h3>
+<h4 id="next">點選「Next」</h4>
+<p><img src="images/install_1.jpg" alt=""></p>
+<h4 id="i-accept-the-terms-in-the-license-agreementnext">選擇「I accept the terms in the License Agreement.」，點選「Next」。</h4>
+<p><img src="images/install_2.jpg" alt=""></p>
+<h4 id="enhanced-keyboard-drivernext">勾選「Enhanced Keyboard Driver」，點選「Next」。</h4>
+<p><img src="images/install_3.jpg" alt=""></p>
+<h4 id="nextjoin-the-vmware-customer-experience-improvement-program">使用預設的選項，點選「Next」。如果你不想協助改善軟體就取消勾選「Join the VMware Customer Experience Improvement Program」。</h4>
+<p><img src="images/install_4.jpg" alt=""></p>
+<h4 id="next1">使用預設選項，建立桌面捷徑與開始程式資料夾，點選「Next」。</h4>
+<p><img src="images/install_5.jpg" alt=""></p>
+<h4 id="install">點選「Install」。</h4>
+<p><img src="images/install_6.jpg" alt=""></p>
+<h4 id="vmware-workstation-player">正在安裝VMware Workstation Player。</h4>
+<p><img src="images/install_7.jpg" alt=""></p>
+<h4 id="finish">安裝完成，點選「Finish」。</h4>
+<p><img src="images/install_8.jpg" alt=""></p>
+<h4 id="yes">點選「Yes」，重新開機。</h4>
+<p><img src="images/install_9.jpg" alt=""></p>
+<h3 id="heading4">第一次啟動</h3>
+<h4 id="vmware-workstation-15-player">對著桌面的捷徑圖示，連續按兩下滑鼠左鍵，開啟VMware Workstation 15 Player。</h4>
+<p><img src="images/first_launch_1.jpg" alt=""></p>
+<h4 id="continue">使用預設的選項，點選「Continue」，使用免費版本。</h4>
+<p><img src="images/first_launch_2.jpg" alt=""></p>
+<h4 id="finish1">點選「Finish」。</h4>
+<p><img src="images/first_launch_3.jpg" alt=""></p>
+<h3 id="heading5">建立虛擬機</h3>
+<h4 id="vmware-workstation-15-playercreate-a-new-virtual-machine">VMware Workstation 15 Player開啟的視窗如圖示，點選「Create a New Virtual Machine」，可以建立虛擬機器，並在虛擬機器上安裝作業系統。</h4>
+<p><img src="images/create_vm_1.png" alt=""></p>
+<h4 id="heading6">選擇稍後安裝作業系統，然後點擊「下一步」</h4>
+<p><img src="images/create_vm_2.png" alt=""></p>
+<h4 id="heading7">選擇作業系統與作業系統版本，然後點擊「下一步」</h4>
+<p><img src="images/create_vm_3.png" alt=""></p>
+<h4 id="heading8">可以修改虛擬機名稱與安裝路徑，然後點擊「下一步」</h4>
+<p><img src="images/create_vm_4.png" alt=""></p>
+<h4 id="heading9">可以修改磁盤容量大小，並選擇虛擬磁盤儲存為單個文件，然後點擊「下一步」</h4>
+<pre><code>&gt; 拆分磁盤後，可以更輕鬆的在計算機之間移動虛擬機，但可能會降低大容量磁盤的性能
+</code></pre>
+<p><img src="images/create_vm_5.png" alt=""></p>
+<h4 id="heading10">點擊「完成」</h4>
+<p><img src="images/create_vm_6.png" alt=""></p>
+<h4 id="heading11">點擊「編輯虛擬機設定」</h4>
+<p><img src="images/create_vm_7.png" alt=""></p>
+<h4 id="cpucddvd">在此介面可以自定義內存、CPU等大小，然後選中新CD/DVD，選擇剛才下載的鏡像文件，然後點擊「關閉」</h4>
+<p><img src="images/create_vm_8.png" alt=""></p>
+<h4 id="-iso-">使用 ISO 映像檔，並選擇檔案位置，點擊「完成」</h4>
+<ul>
+<li><a href="http://isoredirect.centos.org/centos/7/isos/">linux 7 ISO 映像檔下載位置</a></li>
+</ul>
+<p><img src="images/create_vm_9.png" alt=""></p>
+<h3 id="-linux">安裝 linux</h3>
+<blockquote>
+<p>linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範</p>
+</blockquote>
+<h4 id="heading12">開啟虛擬機後會出現以下界面</h4>
+<ol>
+<li>Install CentOS 7：安裝CentOS 7</li>
+<li>Test this media &amp; install CentOS 7：測試安裝文件並安裝CentOS 7</li>
+<li>Troubleshooting：修復故障</li>
+</ol>
+<p><img src="images/install_linux_1.png" alt=""></p>
+<h4 id="continue1">選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue</h4>
+<p><img src="images/install_linux_2.png" alt=""></p>
+<h4 id="heading13">設置時間</h4>
+<p><img src="images/install_linux_3.png" alt=""></p>
+<h4 id="done">選擇時區，查看時間是否正確。然後點擊Done</h4>
+<p><img src="images/install_linux_4.png" alt=""></p>
+<h4 id="heading14">選擇需要安裝的軟件</h4>
+<p><img src="images/install_linux_5.png" alt=""></p>
+<h4 id="-server-with-guidone">選擇 Server with Gui，然後點擊Done</h4>
+<ul>
+<li>預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop</li>
+</ul>
+<p><img src="images/install_linux_6.png" alt=""></p>
+<h4 id="heading15">選擇安裝位置，在這裡可以進行磁盤劃分</h4>
+<p><img src="images/install_linux_7.png" alt=""></p>
+<h4 id="i-wil-configure-partitioningdone">選擇i wil configure partitioning（我將會配置分區），然後點擊done</h4>
+<p><img src="images/install_linux_8.png" alt=""></p>
+<h4 id="bootboot200madd">如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add</h4>
+<p><img src="images/install_linux_9.png" alt=""></p>
+<h4 id="done1">然後以同樣的辦法給其他三個區分配好空間後點擊Done</h4>
+<p><img src="images/install_linux_10.png" alt=""></p>
+<h4 id="acceptchanges">然后会弹出摘要信息，点击AcceptChanges(接受更改)</h4>
+<p><img src="images/install_linux_11.png" alt=""></p>
+<h4 id="heading16">設置主機名與網卡信息</h4>
+<p><img src="images/install_linux_12.png" alt=""></p>
+<h4 id="ipdone">首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。</h4>
+<p><img src="images/install_linux_13.png" alt=""></p>
+<h4 id="begin-installation">最後選擇Begin Installation(開始安裝)</h4>
+<p><img src="images/install_linux_14.png" alt=""></p>
+<h4 id="root">設置root密碼</h4>
+<p><img src="images/install_linux_15.png" alt=""></p>
+<h4 id="rootdone">設置root密碼後點擊Done</h4>
+<p><img src="images/install_linux_16.png" alt=""></p>
+<h4 id="user-creation-">點擊USER CREATION 創建管理員用戶</h4>
+<p><img src="images/install_linux_17.png" alt=""></p>
+<h4 id="done2">輸入用戶名密碼後點擊Done</h4>
+<p><img src="images/install_linux_18.png" alt=""></p>
+<h4 id="heading17">等待系統安裝完畢重啟系統</h4>
+<p><img src="images/install_linux_19.png" alt=""></p>
+<h2 id="heading18">常見問題</h2>
+<h3 id="heading19">滑鼠不見了怎麼辦？</h3>
+<p><code>ctrl + alt</code></p>
+<h2 id="heading20">參考資料</h2>
+<ol>
+<li><a href="https://blog.xuite.net/yh96301/blog/63289807-%E5%85%8D%E8%B2%BB%E8%99%9B%E6%93%AC%E6%A9%9F%E5%99%A8VMware+Workstation+15+Player%E4%B8%8B%E8%BC%89%E8%88%87%E5%AE%89%E8%A3%9D">免費虛擬機器VMware Workstation 15 Player下載與安裝</a></li>
+</ol>
+<ul>
+<li>
+<p><a href="https://blog.csdn.net/babyxue/article/details/80970526">VMware安装Centos7超详细过程（图文）</a></p>
+</li>
+<li>
+<p><a href="https://ktess1020.pixnet.net/blog/post/286058413-vmware-%E5%AE%89%E8%A3%9D-centos-7">VMWare 安裝 CentOS 7</a></p>
+</li>
+<li>
+<p><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/554123/">解決VM 與 Device/Credential Guard 不相容。在禁用 Device/Credential Guard 後，可以執行 VM 的方法</a></p>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
