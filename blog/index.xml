@@ -1,44 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on Gavin 的程式 Blog</title>
-    <link>https://gavin-yeh.github.io/blog/</link>
-    <description>Recent content in Blogs on Gavin 的程式 Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jan 2020 15:03:13 +0800</lastBuildDate>
-    
-	<atom:link href="https://gavin-yeh.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>在 windows 中透過構建虛擬機使用 linux 系統</title>
-      <link>https://gavin-yeh.github.io/blog/vm/</link>
-      <pubDate>Wed, 15 Jan 2020 15:03:13 +0800</pubDate>
-      
-      <guid>https://gavin-yeh.github.io/blog/vm/</guid>
-      <description>為什麼需要虛擬機？  我們從小到大都在使用 windows 的作業系統，但在程式開發時，各大公司或團隊最常使用的是 linux 系統，這時就可以用虛擬機，在 windows 中，建立一台虛擬機，然後虛擬機上是 linux 系統，可以用來進行學習與培訓
- VVMware Workstation Player 免費的虛擬機軟體，是VMware Workstation（付費版本）的精簡版，安裝VMware Workstation Player之後，可以在你的電腦新增多部的虛擬機器（或稱「虛擬電腦」），在虛擬機器中可以安裝不同的作業系統，例如：Windows、Linux&amp;hellip;等；也可以安裝任何的軟體，就好像在使用實體電腦一樣。
-下載 連結到官方網站，點選「下載」，選擇「免費產品下載」的「Workstation Player」 對著Windows的安裝版本，點選「立即下載」；如果你的作業系統是Linux，就下載適用於Linux的版本 下載完成以後，開啟檔案總管，對著下載的檔案連續按兩下滑鼠左鍵，準備進行安裝。 安裝 點選「Next」 選擇「I accept the terms in the License Agreement.」，點選「Next」。 勾選「Enhanced Keyboard Driver」，點選「Next」。 使用預設的選項，點選「Next」。如果你不想協助改善軟體就取消勾選「Join the VMware Customer Experience Improvement Program」。 使用預設選項，建立桌面捷徑與開始程式資料夾，點選「Next」。 點選「Install」。 正在安裝VMware Workstation Player。 安裝完成，點選「Finish」。 點選「Yes」，重新開機。 第一次啟動 對著桌面的捷徑圖示，連續按兩下滑鼠左鍵，開啟VMware Workstation 15 Player。 使用預設的選項，點選「Continue」，使用免費版本。 點選「Finish」。 建立虛擬機 VMware Workstation 15 Player開啟的視窗如圖示，點選「Create a New Virtual Machine」，可以建立虛擬機器，並在虛擬機器上安裝作業系統。 選擇稍後安裝作業系統，然後點擊「下一步」 選擇作業系統與作業系統版本，然後點擊「下一步」 可以修改虛擬機名稱與安裝路徑，然後點擊「下一步」 可以修改磁盤容量大小，並選擇虛擬磁盤儲存為單個文件，然後點擊「下一步」 &amp;gt; 拆分磁盤後，可以更輕鬆的在計算機之間移動虛擬機，但可能會降低大容量磁盤的性能 點擊「完成」 點擊「編輯虛擬機設定」 在此介面可以自定義內存、CPU等大小，然後選中新CD/DVD，選擇剛才下載的鏡像文件，然後點擊「關閉」 使用 ISO 映像檔，並選擇檔案位置，點擊「完成」  linux 7 ISO 映像檔下載位置  安裝 linux  linux 有很多作業系統的版本，在這裡我用 centos 7.</description>
-    </item>
-    
-    <item>
-      <title>使用 hugo &#43; github 打造自己的 blog</title>
-      <link>https://gavin-yeh.github.io/blog/hugo/</link>
-      <pubDate>Wed, 27 Nov 2019 23:17:13 +0800</pubDate>
-      
-      <guid>https://gavin-yeh.github.io/blog/hugo/</guid>
-      <description>要如何簡單搭建一個自己的部落格呢  相信每個工程師都有想過搭建自己的部落格，隨著技術越來越成熟，第三方提供的套件越來越方便
- 兩種網頁：靜態網頁與動態網頁 靜態網頁 靜態網頁：編輯好的網頁推送上機器後就靜止不變，所以在構建靜態網頁時，只是單純的在編輯網頁內容，沒有後台，所以不會有資料庫、後台管理頁面&amp;hellip;等等，例如寫了一篇部落格，就需要更新
- 好處：架構簡單，容易維護 壞處： 架構限制難以新增功能 適合構建簡單網頁  靜態第三方框架  hugo：基於golang語言的部落格框架 hexo jekyllrb VuePress solo  動態網頁 動態網頁：在已設計好的架構下，可以動態的更新網頁，通常在網頁中，要新增一個頁面或文章，只要在後台添加就可以了，內容儲存在資料庫，可以動態的讀取出來，所以設計好的網站架構不需要更改
- 好處：有完整後台與資料庫，架構允許加入網頁的特殊功能，例如：購物車，論壇&amp;hellip;等 壞處： 架構複雜，不易學習與理解 適合完整且複雜網頁  動態第三方框架   WordPress：是全球最流行的內容管理系統，目前全世界超過 33% 以上的網站都是使用 WordPress 建立的，支持相當多的外掛插件
-  WordPress 具有非常龐大的志願者社區，由於開源的特性，讓許多能人志士能夠無償的建立與維護 WordPress 這套系統
-   安裝hugo 使用 windows 系統
- 安裝hugo，在這使用windows包管理器 : Chocolatey，可簡單的使用一行的語法安裝軟件
- choco install hugo 檢查hugo版本
- hugo version 新建一個靜態網頁[myblog]，在本地目錄中的content資料夾新建
- hugo new site myblog 安裝themes (需再根目錄, 在此是資料夾[myblog])，theme在官方主題頁面挑選</description>
-    </item>
-    
-  </channel>
-</rss>
