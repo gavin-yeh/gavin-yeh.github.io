@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>linux 系統中如何修改環境變量 // Gavin 的程式 Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://gavin-yeh.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="linux 系統中如何修改環境變量"/>
+<meta name="twitter:description" content="linux 系統中如何修改環境變量 shell 的週期  用戶登入到 linux 系統後，系統將啟動一個用戶的 shell，在這個 shell 中，可以使用 shell 命令或聲明變量，也可以創建並運行 shell 腳本程序 運行 shell 腳本時，如果使用 sh/bash 指令，系統將創建一個子 shell。此時，系統中將有兩個 shell，一個是登入時系統的 shell，另一個是系統為了運行腳本程序創建的 shell  當一個腳本程序運行完畢，他的腳本將中止，可以返回到該腳本之前的 shell 用戶可以有很多 shell，每個 shell 都是有某個 shell（稱為父 shell）派生  shell 並非一個個終端(terminal)，在一個終端當中，可以開很多 shell
+環境變量的週期  在 shell 中執行時，會提供一組環境變量 當子 shell 中定義的變量只在該子 shell 內有效，如果在一個 shell 腳本程序中定義了一個變量，當該腳本程序運行時，這定義只在該腳本程序內的一個局部變量，其他的 shell 不能引用它 要使某個變量的值可以在其他 shell 中被改變，可以使用 export 命令對已定義的變量進行輸出。export 命令將使系統在創建每一新的 shell 時定義這個變量的一個拷貝。這個過程稱為變量輸出  shell 與環境變量  export 指令將自定義變量變成環境變量 執行腳本時，會開啟一個子 shell 環境，將父 shell 的系統變量複製到子 shell，不會複製父 shell 的自定義變量 子 shell 中定義的系統變量，不能在父 shell 中訪問  在 Ubuntu 中有如下幾個檔案可以設定環境變數  /etc/profile: 在登入時，作業系統定製使用者環境時使用的第一個檔案，此檔案為系統的每個使用者設定環境資訊，當用戶第一次登入時，該檔案被執行 /etc/environment: 在登入時，作業系統使用的第二個檔案，系統在讀取用戶的 profile 前，設定環境檔案的環境變數 ~/."/>
+
+    <meta property="og:title" content="linux 系統中如何修改環境變量" />
+<meta property="og:description" content="linux 系統中如何修改環境變量 shell 的週期  用戶登入到 linux 系統後，系統將啟動一個用戶的 shell，在這個 shell 中，可以使用 shell 命令或聲明變量，也可以創建並運行 shell 腳本程序 運行 shell 腳本時，如果使用 sh/bash 指令，系統將創建一個子 shell。此時，系統中將有兩個 shell，一個是登入時系統的 shell，另一個是系統為了運行腳本程序創建的 shell  當一個腳本程序運行完畢，他的腳本將中止，可以返回到該腳本之前的 shell 用戶可以有很多 shell，每個 shell 都是有某個 shell（稱為父 shell）派生  shell 並非一個個終端(terminal)，在一個終端當中，可以開很多 shell
+環境變量的週期  在 shell 中執行時，會提供一組環境變量 當子 shell 中定義的變量只在該子 shell 內有效，如果在一個 shell 腳本程序中定義了一個變量，當該腳本程序運行時，這定義只在該腳本程序內的一個局部變量，其他的 shell 不能引用它 要使某個變量的值可以在其他 shell 中被改變，可以使用 export 命令對已定義的變量進行輸出。export 命令將使系統在創建每一新的 shell 時定義這個變量的一個拷貝。這個過程稱為變量輸出  shell 與環境變量  export 指令將自定義變量變成環境變量 執行腳本時，會開啟一個子 shell 環境，將父 shell 的系統變量複製到子 shell，不會複製父 shell 的自定義變量 子 shell 中定義的系統變量，不能在父 shell 中訪問  在 Ubuntu 中有如下幾個檔案可以設定環境變數  /etc/profile: 在登入時，作業系統定製使用者環境時使用的第一個檔案，此檔案為系統的每個使用者設定環境資訊，當用戶第一次登入時，該檔案被執行 /etc/environment: 在登入時，作業系統使用的第二個檔案，系統在讀取用戶的 profile 前，設定環境檔案的環境變數 ~/." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/" /><meta property="article:section" content="linux" />
+<meta property="article:published_time" content="2020-10-20T15:17:13+08:00" />
+<meta property="article:modified_time" content="2020-10-20T15:17:13+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://gavin-yeh.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Gavin 的程式 Blog</h1>
+      <p>從零開始成為程式高手</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">linux 系統中如何修改環境變量</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Oct 20, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="linux-系統中如何修改環境變量">linux 系統中如何修改環境變量</h1>
+<h2 id="shell-的週期">shell 的週期</h2>
+<ul>
+<li>用戶登入到 linux 系統後，系統將啟動一個用戶的 shell，在這個 shell 中，可以使用 shell 命令或聲明變量，也可以創建並運行 shell 腳本程序</li>
+<li>運行 shell 腳本時，如果<a href="https://www.cnblogs.com/pcat/p/5467188.html">使用 sh/bash 指令</a>，系統將創建一個子 shell。此時，系統中將有兩個 shell，一個是登入時系統的 shell，另一個是系統為了運行腳本程序創建的 shell <!-- raw HTML omitted --></li>
+<li>當一個腳本程序運行完畢，他的腳本將中止，可以返回到該腳本之前的 shell</li>
+<li>用戶可以有很多 shell，每個 shell 都是有某個 shell（稱為父 shell）派生</li>
+</ul>
+<p>shell 並非一個個終端(terminal)，在一個終端當中，可以開很多 shell</p>
+<!-- raw HTML omitted -->
+<h2 id="環境變量的週期">環境變量的週期</h2>
+<ul>
+<li>在 shell 中執行時，會提供一組環境變量</li>
+<li>當子 shell 中定義的變量只在該子 shell 內有效，如果在一個 shell 腳本程序中定義了一個變量，當該腳本程序運行時，這定義只在該腳本程序內的一個局部變量，其他的 shell 不能引用它</li>
+<li>要使某個變量的值可以在其他 shell 中被改變，可以使用 export 命令對已定義的變量進行輸出。export 命令將使系統在創建每一新的 shell 時定義這個變量的一個拷貝。這個過程稱為<code>變量輸出</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="shell-與環境變量">shell 與環境變量</h2>
+<ul>
+<li>export 指令將自定義變量變成環境變量</li>
+<li>執行腳本時，會開啟一個子 shell 環境，將父 shell 的系統變量複製到子 shell，不會複製父 shell 的自定義變量</li>
+<li>子 shell 中定義的系統變量，不能在父 shell 中訪問</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="在-ubuntu-中有如下幾個檔案可以設定環境變數">在 Ubuntu 中有如下幾個檔案可以設定環境變數</h2>
+<ol>
+<li>/etc/profile: 在<code>登入時，作業系統定製使用者環境時使用的第一個檔案</code>，此檔案為系統的每個使用者設定環境資訊，當用戶第一次登入時，該檔案被執行</li>
+<li>/etc/environment: 在<code>登入時，作業系統使用的第二個檔案</code>，系統在讀取用戶的 profile 前，設定環境檔案的環境變數</li>
+<li>~/.bash_profile: 在<code>登入時用到的第三個檔案</code>是 .profile 文件，每個用戶可使用該檔案輸入專用於自己使用的 shell 資訊，當用戶登入時，該檔案僅僅執行一次
+預設情況下，他設定環境變量，執行使用者的 .bashrc 檔案
+/etc/bashrc: 為每一個執行 bash shell 的使用者執行此檔案。當 bash shell 被開啟時，該檔案被讀取</li>
+<li>~/.bashrc: 該檔案包含專用於你的 bash shell 的 bash 信息，當<code>登入時</code>以及<code>每次開啟新的 shell 時</code>，該該檔案被讀取</li>
+</ol>
+<h3 id="環境變量的優先順序">環境變量的優先順序</h3>
+<blockquote>
+<p>1 &gt; 2 &gt; 3 <!-- raw HTML omitted --></p>
+</blockquote>
+<h4 id="參考資料">參考資料</h4>
+<ul>
+<li><a href="https://blog.csdn.net/bailyzheng/article/details/7488769">linux export 的作用</a></li>
+<li><a href="https://www.itread01.com/content/1548422121.html">為什麼我使用source /etc/profile這個命令之後，新的環境變數只能在一個終端裡面有效？</a></li>
+</ul>
+<h1 id="export">export</h1>
+<ul>
+<li>用於設置或顯示環境變量。</li>
+<li>在 shell 中執行程序時，shell 會提供一組環境變量。</li>
+<li>export 可新增，修改或刪除環境變量，供後續執行的程序使用。</li>
+<li>export 的效力僅及於該此登入操作。</li>
+</ul>
+<h2 id="語法">語法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export 導出<span style="color:#f92672">[</span>-fnp<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>變量名稱<span style="color:#f92672">]=[</span>變量設置值<span style="color:#f92672">]</span> TODO<span style="color:#f92672">(</span>del<span style="color:#f92672">)</span>
+</code></pre></div><h3 id="參數說明">參數說明</h3>
+<ul>
+<li>-f 代表[變量名稱]中的函數名稱</li>
+<li>-n 刪除指定的變量。變量實際上不會被刪除，只是後續的指令的執行環境不會輸出 TODO(del)</li>
+<li>-p 列出所有的 shell 賦予程序的環境變量</li>
+</ul>
+<h2 id="範例">範例</h2>
+<h3 id="定義環境變量">定義環境變量</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export MYENV
+</code></pre></div><h3 id="定義環境變量並賦值">定義環境變量並賦值</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export MYENV<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><h3 id="列出指定當前所有環境變量">列出指定當前所有環境變量</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export -p MYENV
+</code></pre></div><p>輸出</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">export MYENV=0
+</code></pre></div><h3 id="列出當前所有環境變量">列出當前所有環境變量</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export -p
+</code></pre></div><p>輸出</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">export MYENV=0
+declare -x HOME=“/root“
+declare -x LANG=“zh_CN.UTF-8“
+declare -x LANGUAGE=“zh_CN:zh“
+declare -x LESSCLOSE=“/usr/bin/lesspipe %s %s“
+declare -x LESSOPEN=“| /usr/bin/lesspipe %s“
+
+......
+</code></pre></div><h4 id="參考資料-1">參考資料</h4>
+<p><a href="https://www.runoob.com/linux/linux-comm-export.html">https://www.runoob.com/linux/linux-comm-export.html</a></p>
+<h1 id="unset">unset</h1>
+<p>刪除環境變量</p>
+<h2 id="語法-1">語法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">unset <span style="color:#f92672">[</span>變量名稱<span style="color:#f92672">]</span>
+</code></pre></div><h2 id="範例-1">範例</h2>
+<h3 id="刪除環境變量">刪除環境變量</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export MYENV
+</code></pre></div><h1 id="最根本的設置更改變量的配置文件">最根本的設置：更改變量的配置文件</h1>
+<ul>
+<li>export 只能作用在當前 shell 與子 shell</li>
+<li>用戶登出或重新開機後，所有使用 export 設定的環境變量都會失效</li>
+</ul>
+<h2 id="修改-profile-文件">修改 profile 文件</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/profile     <span style="color:#75715e"># 為系統級設定</span>
+or
+vi ~/.bash_profile  <span style="color:#75715e"># 為用戶級設定</span>
+</code></pre></div><p>檔案中加入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">/bin&#34;</span>
+</code></pre></div><h2 id="修改-bashrc-文件">修改 .bashrc 文件</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/.bashrc     <span style="color:#75715e"># 為系統級設定</span>
+or
+vi ~/.bashrc        <span style="color:#75715e"># 為用戶級設定</span>
+</code></pre></div><p>檔案中加入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:</span>$HOME<span style="color:#e6db74">/bin&#34;</span>
+</code></pre></div><h2 id="source">source</h2>
+<h2 id="通過-echo-命令顯示用戶變量">通過 echo 命令顯示用戶變量</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo $PATH
+</code></pre></div><h2 id="通過-env-命令顯示用戶變量">通過 env 命令顯示用戶變量</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">env | grep PATH
+</code></pre></div><hr>
+<h4 id="延伸閱讀">延伸閱讀</h4>
+<p><a href="https://www.cntofu.com/book/46/linux_system/1517.md">https://www.cntofu.com/book/46/linux_system/1517.md</a>
+<a href="https://www.cnblogs.com/pcat/p/5467188.html">https://www.cnblogs.com/pcat/p/5467188.html</a>
+<a href="http://linux.vbird.org/linux_basic/0320bash.php#fig10.4.1">http://linux.vbird.org/linux_basic/0320bash.php#fig10.4.1</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

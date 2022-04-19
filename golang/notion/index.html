@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>golang // Gavin 的程式 Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://gavin-yeh.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="golang"/>
+<meta name="twitter:description" content="golang golang 為 go language 的簡寫
+golang 的核心應用領域  BT(區塊鏈)應用 服務端（後端）的開發/遊戲軟件開發 分布式/雲計算研發  golang 的優勢  數據處理（計算能力） 大併發 數據通道  golang 簡介 來歷 很久以前，有一個IT公司，這公司有個傳統，允許員工擁有20%自由時間來開發實驗性項目。在2007的某一天，公司的幾個大牛，正在用c&#43;&#43;開發一些比較繁瑣但是核心的工作，主要包括龐大的分佈式集群，大牛覺得很鬧心，後來c&#43;&#43;委員會來他們公司演講，說c&#43;&#43;將要添加大概35種新特性。這幾個大牛的其中一個人，名為：Rob Pike，聽後心中一萬個xxx飄過，“c&#43;&#43;特性還不夠多嗎？簡化c&#43;&#43;應該更有成就感吧”。於是乎，Rob Pike和其他幾個大牛討論了一下，怎麼解決這個問題，過了一會，Rob Pike說要不我們自己搞個語言吧，名字叫“go”，非常簡短，容易拼寫。其他幾位大牛就說好啊，然後他們找了塊白板，在上面寫下希望能有哪些功能（詳見文尾）。接下來的時間裡，大牛們開心的討論設計這門語言的特性，經過漫長的歲月，他們決定，以c語言為原型，以及借鑒其他語言的一些特性，來解放程序員，解放自己，然後在2009年，go語言誕生。
+思想 Less can be more 大道至簡,小而蘊真 讓事情變得複雜很容易，讓事情變得簡單才難 深刻的工程文化
+優點 自帶gc。 靜態編譯，編譯好後，扔服務器直接運行。 簡單的思想，沒有繼承，多態，類等。 豐富的庫和詳細的開發文檔。 語法層支持並發，和擁有同步並發的channel類型，使並發開髮變得非常方便。 簡潔的語法，提高開發效率，同時提高代碼的閱讀性和可維護性。 超級簡單的交叉編譯，僅需更改環境變量。 （花了我兩天時間編譯一個imagemagick到arm平台） 內含完善、全面的軟件工程工具。 Go語言自帶的命令和工具相當地強大。通過它們，我們可以很輕鬆地完成Go語言程序的獲取、編譯、測試、安裝、運行、運行分析等一系列工作，這幾乎涉及了開發和維護一個軟件的所有環節。
+Go 語言是谷歌 2009 年首次推出並在 2012 年正式發布的一種全新的編程語言，可以在不損失應用程序性能的情況下降低代碼的複雜性。谷歌首席軟件工程師羅布派克(Rob Pike)說：我們之所以開發 Go，是因為過去10多年間軟件開發的難度令人沮喪。 Google 對 Go 寄予厚望，其設計是讓軟件充分發揮多核心處理器同步多工的優點，並可解決面向對象程序設計的麻煩。它具有現代的程序語言特色，如垃圾回收，幫助開發者處理瑣碎但重要的內存管理問題。 Go 的速度也非常快，幾乎和 C 或 C&#43;&#43; 程序一樣快，且能夠快速開發應用程序。 Go語言的主要特徵：
+1. 自動立即回收。 1. 更豐富的內置類型。 1. 函數多返回值。 1."/>
+
+    <meta property="og:title" content="golang" />
+<meta property="og:description" content="golang golang 為 go language 的簡寫
+golang 的核心應用領域  BT(區塊鏈)應用 服務端（後端）的開發/遊戲軟件開發 分布式/雲計算研發  golang 的優勢  數據處理（計算能力） 大併發 數據通道  golang 簡介 來歷 很久以前，有一個IT公司，這公司有個傳統，允許員工擁有20%自由時間來開發實驗性項目。在2007的某一天，公司的幾個大牛，正在用c&#43;&#43;開發一些比較繁瑣但是核心的工作，主要包括龐大的分佈式集群，大牛覺得很鬧心，後來c&#43;&#43;委員會來他們公司演講，說c&#43;&#43;將要添加大概35種新特性。這幾個大牛的其中一個人，名為：Rob Pike，聽後心中一萬個xxx飄過，“c&#43;&#43;特性還不夠多嗎？簡化c&#43;&#43;應該更有成就感吧”。於是乎，Rob Pike和其他幾個大牛討論了一下，怎麼解決這個問題，過了一會，Rob Pike說要不我們自己搞個語言吧，名字叫“go”，非常簡短，容易拼寫。其他幾位大牛就說好啊，然後他們找了塊白板，在上面寫下希望能有哪些功能（詳見文尾）。接下來的時間裡，大牛們開心的討論設計這門語言的特性，經過漫長的歲月，他們決定，以c語言為原型，以及借鑒其他語言的一些特性，來解放程序員，解放自己，然後在2009年，go語言誕生。
+思想 Less can be more 大道至簡,小而蘊真 讓事情變得複雜很容易，讓事情變得簡單才難 深刻的工程文化
+優點 自帶gc。 靜態編譯，編譯好後，扔服務器直接運行。 簡單的思想，沒有繼承，多態，類等。 豐富的庫和詳細的開發文檔。 語法層支持並發，和擁有同步並發的channel類型，使並發開髮變得非常方便。 簡潔的語法，提高開發效率，同時提高代碼的閱讀性和可維護性。 超級簡單的交叉編譯，僅需更改環境變量。 （花了我兩天時間編譯一個imagemagick到arm平台） 內含完善、全面的軟件工程工具。 Go語言自帶的命令和工具相當地強大。通過它們，我們可以很輕鬆地完成Go語言程序的獲取、編譯、測試、安裝、運行、運行分析等一系列工作，這幾乎涉及了開發和維護一個軟件的所有環節。
+Go 語言是谷歌 2009 年首次推出並在 2012 年正式發布的一種全新的編程語言，可以在不損失應用程序性能的情況下降低代碼的複雜性。谷歌首席軟件工程師羅布派克(Rob Pike)說：我們之所以開發 Go，是因為過去10多年間軟件開發的難度令人沮喪。 Google 對 Go 寄予厚望，其設計是讓軟件充分發揮多核心處理器同步多工的優點，並可解決面向對象程序設計的麻煩。它具有現代的程序語言特色，如垃圾回收，幫助開發者處理瑣碎但重要的內存管理問題。 Go 的速度也非常快，幾乎和 C 或 C&#43;&#43; 程序一樣快，且能夠快速開發應用程序。 Go語言的主要特徵：
+1. 自動立即回收。 1. 更豐富的內置類型。 1. 函數多返回值。 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavin-yeh.github.io/golang/notion/" /><meta property="article:section" content="golang" />
+<meta property="article:published_time" content="2020-10-20T15:17:13+08:00" />
+<meta property="article:modified_time" content="2020-10-20T15:17:13+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://gavin-yeh.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Gavin 的程式 Blog</h1>
+      <p>從零開始成為程式高手</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">golang</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Oct 20, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="golang">golang</h1>
+<p>golang 為 go language 的簡寫</p>
+<h1 id="golang-的核心應用領域">golang 的核心應用領域</h1>
+<ol>
+<li>BT(區塊鏈)應用</li>
+<li>服務端（後端）的開發/遊戲軟件開發</li>
+<li>分布式/雲計算研發</li>
+</ol>
+<h1 id="golang-的優勢">golang 的優勢</h1>
+<ol>
+<li>數據處理（計算能力）</li>
+<li>大併發</li>
+<li>數據通道</li>
+</ol>
+<h1 id="golang-簡介">golang 簡介</h1>
+<h2 id="來歷">來歷</h2>
+<p>很久以前，有一個IT公司，這公司有個傳統，允許員工擁有20%自由時間來開發實驗性項目。在2007的某一天，公司的幾個大牛，正在用c++開發一些比較繁瑣但是核心的工作，主要包括龐大的分佈式集群，大牛覺得很鬧心，後來c++委員會來他們公司演講，說c++將要添加大概35種新特性。這幾個大牛的其中一個人，名為：Rob Pike，聽後心中一萬個xxx飄過，“c++特性還不夠多嗎？簡化c++應該更有成就感吧”。於是乎，Rob Pike和其他幾個大牛討論了一下，怎麼解決這個問題，過了一會，Rob Pike說要不我們自己搞個語言吧，名字叫“go”，非常簡短，容易拼寫。其他幾位大牛就說好啊，然後他們找了塊白板，在上面寫下希望能有哪些功能（詳見文尾）。接下來的時間裡，大牛們開心的討論設計這門語言的特性，經過漫長的歲月，他們決定，以c語言為原型，以及借鑒其他語言的一些特性，來解放程序員，解放自己，然後在2009年，go語言誕生。</p>
+<h2 id="思想">思想</h2>
+<p>Less can be more 大道至簡,小而蘊真 讓事情變得複雜很容易，讓事情變得簡單才難 深刻的工程文化</p>
+<h2 id="優點">優點</h2>
+<p>自帶gc。
+靜態編譯，編譯好後，扔服務器直接運行。
+簡單的思想，沒有繼承，多態，類等。
+豐富的庫和詳細的開發文檔。
+語法層支持並發，和擁有同步並發的channel類型，使並發開髮變得非常方便。
+簡潔的語法，提高開發效率，同時提高代碼的閱讀性和可維護性。
+超級簡單的交叉編譯，僅需更改環境變量。 （花了我兩天時間編譯一個imagemagick到arm平台）
+內含完善、全面的軟件工程工具。 Go語言自帶的命令和工具相當地強大。通過它們，我們可以很輕鬆地完成Go語言程序的獲取、編譯、測試、安裝、運行、運行分析等一系列工作，這幾乎涉及了開發和維護一個軟件的所有環節。</p>
+<p>Go 語言是谷歌 2009 年首次推出並在 2012 年正式發布的一種全新的編程語言，可以在不損失應用程序性能的情況下降低代碼的複雜性。谷歌首席軟件工程師羅布派克(Rob Pike)說：我們之所以開發 Go，是因為過去10多年間軟件開發的難度令人沮喪。 Google 對 Go 寄予厚望，其設計是讓軟件充分發揮多核心處理器同步多工的優點，並可解決面向對象程序設計的麻煩。它具有現代的程序語言特色，如垃圾回收，幫助開發者處理瑣碎但重要的內存管理問題。 Go 的速度也非常快，幾乎和 C 或 C++ 程序一樣快，且能夠快速開發應用程序。
+Go語言的主要特徵：</p>
+<pre><code>1. 自動立即回收。
+1. 更豐富的內置類型。
+1. 函數多返回值。
+1. 錯誤處理。
+1. 匿名函數和閉包。
+1. 類型和接口。
+1. 並發編程。
+1. 反射。
+1. 語言交互性。
+</code></pre>
+<p>Golang文件名：</p>
+<pre><code>所有的go源碼都是以 &quot;.go&quot; 結尾。
+</code></pre>
+<p>Go語言命名：</p>
+<p>1.Go的函數、變量、常量、自定義類型、包(package)的命名方式遵循以下規則：</p>
+<pre><code>1）首字符可以是任意的Unicode字符或者下劃線
+2）剩餘字符可以是Unicode字符、下劃線、數字
+3）字符長度不限
+</code></pre>
+<p>2.Go只有25個關鍵字</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">    <span style="color:#66d9ef">break</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">func</span> <span style="color:#66d9ef">interface</span> <span style="color:#66d9ef">select</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">map</span> <span style="color:#66d9ef">struct</span>
+    <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">goto</span> <span style="color:#f92672">package</span> <span style="color:#66d9ef">switch</span>
+    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">fallthrough</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">range</span> <span style="color:#66d9ef">type</span>
+    <span style="color:#66d9ef">continue</span> <span style="color:#66d9ef">for</span> <span style="color:#f92672">import</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">var</span>
+</code></pre></div><p>3.Go還有37個保留字</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">    <span style="color:#a6e22e">Constants</span>: <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">false</span> <span style="color:#66d9ef">iota</span> <span style="color:#66d9ef">nil</span>
+
+    <span style="color:#a6e22e">Types</span>: <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">int8</span> <span style="color:#66d9ef">int16</span> <span style="color:#66d9ef">int32</span> <span style="color:#66d9ef">int64</span>
+              <span style="color:#66d9ef">uint</span> <span style="color:#66d9ef">uint8</span> <span style="color:#66d9ef">uint16</span> <span style="color:#66d9ef">uint32</span> <span style="color:#66d9ef">uint64</span> <span style="color:#66d9ef">uintptr</span>
+              <span style="color:#66d9ef">float32</span> <span style="color:#66d9ef">float64</span> <span style="color:#66d9ef">complex128</span> <span style="color:#66d9ef">complex64</span>
+              <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">byte</span> <span style="color:#66d9ef">rune</span> <span style="color:#66d9ef">string</span> <span style="color:#66d9ef">error</span>
+
+    <span style="color:#a6e22e">Functions</span>: <span style="color:#a6e22e">make</span> <span style="color:#a6e22e">len</span> <span style="color:#a6e22e">cap</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">append</span> <span style="color:#a6e22e">copy</span> <span style="color:#a6e22e">close</span> <span style="color:#a6e22e">delete</span>
+                 <span style="color:#a6e22e">complex</span> <span style="color:#a6e22e">real</span> <span style="color:#a6e22e">imag</span>
+                 <span style="color:#a6e22e">panic</span> <span style="color:#a6e22e">recover</span>
+</code></pre></div><p>4.可見性：</p>
+<pre><code>1）聲明在函數內部，是函數的本地值，類似private
+2）聲明在函數外部，是對當前包可見(包內所有.go文件都可見)的全局值，類似protect
+3）聲明在函數外部且首字母大寫是所有包可見的全局值,類似public
+</code></pre>
+<p>Go語言聲明：
+有四種主要聲明方式：</p>
+<pre><code>var（聲明變量）, const（聲明常量）, type（聲明類型） ,func（聲明函數）</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

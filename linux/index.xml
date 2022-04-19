@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linuxes on Gavin 的程式 Blog</title>
+    <link>https://gavin-yeh.github.io/linux/</link>
+    <description>Recent content in Linuxes on Gavin 的程式 Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Oct 2020 15:17:13 +0800</lastBuildDate><atom:link href="https://gavin-yeh.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux 系統中如何修改環境變量</title>
+      <link>https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/</guid>
+      <description>linux 系統中如何修改環境變量 shell 的週期  用戶登入到 linux 系統後，系統將啟動一個用戶的 shell，在這個 shell 中，可以使用 shell 命令或聲明變量，也可以創建並運行 shell 腳本程序 運行 shell 腳本時，如果使用 sh/bash 指令，系統將創建一個子 shell。此時，系統中將有兩個 shell，一個是登入時系統的 shell，另一個是系統為了運行腳本程序創建的 shell  當一個腳本程序運行完畢，他的腳本將中止，可以返回到該腳本之前的 shell 用戶可以有很多 shell，每個 shell 都是有某個 shell（稱為父 shell）派生  shell 並非一個個終端(terminal)，在一個終端當中，可以開很多 shell
+環境變量的週期  在 shell 中執行時，會提供一組環境變量 當子 shell 中定義的變量只在該子 shell 內有效，如果在一個 shell 腳本程序中定義了一個變量，當該腳本程序運行時，這定義只在該腳本程序內的一個局部變量，其他的 shell 不能引用它 要使某個變量的值可以在其他 shell 中被改變，可以使用 export 命令對已定義的變量進行輸出。export 命令將使系統在創建每一新的 shell 時定義這個變量的一個拷貝。這個過程稱為變量輸出  shell 與環境變量  export 指令將自定義變量變成環境變量 執行腳本時，會開啟一個子 shell 環境，將父 shell 的系統變量複製到子 shell，不會複製父 shell 的自定義變量 子 shell 中定義的系統變量，不能在父 shell 中訪問  在 Ubuntu 中有如下幾個檔案可以設定環境變數  /etc/profile: 在登入時，作業系統定製使用者環境時使用的第一個檔案，此檔案為系統的每個使用者設定環境資訊，當用戶第一次登入時，該檔案被執行 /etc/environment: 在登入時，作業系統使用的第二個檔案，系統在讀取用戶的 profile 前，設定環境檔案的環境變數 ~/.</description>
+    </item>
+    
+    <item>
+      <title>安裝 centos 7 (linux)</title>
+      <link>https://gavin-yeh.github.io/linux/install/install_centos7/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/linux/install/install_centos7/</guid>
+      <description>安裝 centos 7 (linux)  linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範
+ 開啟虛擬機後會出現以下界面  Install CentOS 7：安裝CentOS 7 Test this media &amp;amp; install CentOS 7：測試安裝文件並安裝CentOS 7 Troubleshooting：修復故障  選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue 設置時間 選擇時區，查看時間是否正確。然後點擊Done 選擇需要安裝的軟件 選擇 Server with Gui，然後點擊Done  預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop  選擇安裝位置，在這裡可以進行磁盤劃分 選擇i wil configure partitioning（我將會配置分區），然後點擊done 如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add 然後以同樣的辦法給其他三個區分配好空間後點擊Done 然后会弹出摘要信息，点击AcceptChanges(接受更改) 設置主機名與網卡信息 首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。 最後選擇Begin Installation(開始安裝) 設置root密碼 設置root密碼後點擊Done 點擊USER CREATION 創建管理員用戶 輸入用戶名密碼後點擊Done 等待系統安裝完畢重啟系統 </description>
+    </item>
+    
+  </channel>
+</rss>

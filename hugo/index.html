@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>使用 hugo &#43; github 打造自己的 blog // Gavin 的程式 Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://gavin-yeh.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 hugo &#43; github 打造自己的 blog"/>
+<meta name="twitter:description" content="要如何簡單搭建一個自己的部落格呢  相信每個工程師都有想過搭建自己的部落格，隨著技術越來越成熟，第三方提供的套件越來越方便
+ 兩種網頁：靜態網頁與動態網頁 靜態網頁 靜態網頁：編輯好的網頁推送上機器後就靜止不變，所以在構建靜態網頁時，只是單純的在編輯網頁內容，沒有後台，所以不會有資料庫、後台管理頁面&hellip;等等，例如寫了一篇部落格，就需要更新
+ 好處：架構簡單，容易維護 壞處： 架構限制難以新增功能 適合構建簡單網頁  靜態第三方框架  hugo：基於golang語言的部落格框架 hexo jekyllrb VuePress solo  動態網頁 動態網頁：在已設計好的架構下，可以動態的更新網頁，通常在網頁中，要新增一個頁面或文章，只要在後台添加就可以了，內容儲存在資料庫，可以動態的讀取出來，所以設計好的網站架構不需要更改
+ 好處：有完整後台與資料庫，架構允許加入網頁的特殊功能，例如：購物車，論壇&hellip;等 壞處： 架構複雜，不易學習與理解 適合完整且複雜網頁  動態第三方框架   WordPress：是全球最流行的內容管理系統，目前全世界超過 33% 以上的網站都是使用 WordPress 建立的，支持相當多的外掛插件
+  WordPress 具有非常龐大的志願者社區，由於開源的特性，讓許多能人志士能夠無償的建立與維護 WordPress 這套系統
+   安裝hugo 使用 windows 系統
+ 安裝hugo，在這使用windows包管理器 : Chocolatey，可簡單的使用一行的語法安裝軟件
+ choco install hugo 使用 mac 系統
+brew install hugo 參考資料 https://gohugo.io/getting-started/installing/#homebrew-macos
+ 檢查hugo版本
+ hugo version  新建一個靜態網頁[myblog]，在本地目錄中的content資料夾新建"/>
+
+    <meta property="og:title" content="使用 hugo &#43; github 打造自己的 blog" />
+<meta property="og:description" content="要如何簡單搭建一個自己的部落格呢  相信每個工程師都有想過搭建自己的部落格，隨著技術越來越成熟，第三方提供的套件越來越方便
+ 兩種網頁：靜態網頁與動態網頁 靜態網頁 靜態網頁：編輯好的網頁推送上機器後就靜止不變，所以在構建靜態網頁時，只是單純的在編輯網頁內容，沒有後台，所以不會有資料庫、後台管理頁面&hellip;等等，例如寫了一篇部落格，就需要更新
+ 好處：架構簡單，容易維護 壞處： 架構限制難以新增功能 適合構建簡單網頁  靜態第三方框架  hugo：基於golang語言的部落格框架 hexo jekyllrb VuePress solo  動態網頁 動態網頁：在已設計好的架構下，可以動態的更新網頁，通常在網頁中，要新增一個頁面或文章，只要在後台添加就可以了，內容儲存在資料庫，可以動態的讀取出來，所以設計好的網站架構不需要更改
+ 好處：有完整後台與資料庫，架構允許加入網頁的特殊功能，例如：購物車，論壇&hellip;等 壞處： 架構複雜，不易學習與理解 適合完整且複雜網頁  動態第三方框架   WordPress：是全球最流行的內容管理系統，目前全世界超過 33% 以上的網站都是使用 WordPress 建立的，支持相當多的外掛插件
+  WordPress 具有非常龐大的志願者社區，由於開源的特性，讓許多能人志士能夠無償的建立與維護 WordPress 這套系統
+   安裝hugo 使用 windows 系統
+ 安裝hugo，在這使用windows包管理器 : Chocolatey，可簡單的使用一行的語法安裝軟件
+ choco install hugo 使用 mac 系統
+brew install hugo 參考資料 https://gohugo.io/getting-started/installing/#homebrew-macos
+ 檢查hugo版本
+ hugo version  新建一個靜態網頁[myblog]，在本地目錄中的content資料夾新建" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavin-yeh.github.io/hugo/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2019-11-27T23:17:13+08:00" />
+<meta property="article:modified_time" content="2019-11-27T23:17:13+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://gavin-yeh.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Gavin 的程式 Blog</h1>
+      <p>從零開始成為程式高手</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">使用 hugo &#43; github 打造自己的 blog</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Nov 27, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="要如何簡單搭建一個自己的部落格呢">要如何簡單搭建一個自己的部落格呢</h2>
+<blockquote>
+<p>相信每個工程師都有想過搭建自己的部落格，隨著技術越來越成熟，第三方提供的套件越來越方便</p>
+</blockquote>
+<h2 id="兩種網頁靜態網頁與動態網頁">兩種網頁：靜態網頁與動態網頁</h2>
+<h3 id="靜態網頁">靜態網頁</h3>
+<!-- raw HTML omitted -->
+<p>靜態網頁：<code>編輯好的網頁推送上機器後就靜止不變</code>，所以在構建靜態網頁時，只是單純的在編輯網頁內容，沒有後台，所以不會有資料庫、後台管理頁面&hellip;等等，例如寫了一篇部落格，就需要更新</p>
+<ul>
+<li>好處：架構簡單，容易維護</li>
+<li>壞處： 架構限制難以新增功能</li>
+<li>適合構建簡單網頁</li>
+</ul>
+<h4 id="靜態第三方框架">靜態第三方框架</h4>
+<ul>
+<li><a href="https://www.gohugo.org/">hugo</a>：基於golang語言的部落格框架</li>
+<li><a href="https://hexo.io/zh-tw/">hexo</a></li>
+<li><a href="https://jekyllrb.com/">jekyllrb</a></li>
+<li><a href="https://vuepress.vuejs.org/zh/">VuePress</a></li>
+<li><a href="https://solo.b3log.org/">solo</a></li>
+</ul>
+<h3 id="動態網頁">動態網頁</h3>
+<!-- raw HTML omitted -->
+<p>動態網頁：<code>在已設計好的架構下，可以動態的更新網頁</code>，通常在網頁中，要新增一個頁面或文章，只要在後台添加就可以了，內容儲存在資料庫，可以動態的讀取出來，所以設計好的網站架構不需要更改</p>
+<ul>
+<li>好處：有完整後台與資料庫，架構允許加入網頁的特殊功能，例如：購物車，論壇&hellip;等</li>
+<li>壞處： 架構複雜，不易學習與理解</li>
+<li>適合完整且複雜網頁</li>
+</ul>
+<h4 id="動態第三方框架">動態第三方框架</h4>
+<ul>
+<li>
+<p><a href="https://wordpress.org/">WordPress</a>：是全球最流行的內容管理系統，目前全世界超過 33% 以上的網站都是使用 WordPress 建立的，支持相當多的外掛插件</p>
+</li>
+<li>
+<p>WordPress 具有非常龐大的<a href="https://make.wordpress.org/">志願者社區</a>，由於開源的特性，讓許多能人志士能夠無償的建立與維護 WordPress 這套系統</p>
+</li>
+</ul>
+<hr>
+<h2 id="安裝hugo">安裝hugo</h2>
+<p>使用 windows 系統</p>
+<blockquote>
+<p>安裝hugo，在這使用<a href="../chocolatey">windows包管理器 : Chocolatey</a>，可簡單的使用一行的語法安裝軟件</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">choco install hugo
+</code></pre></div><p>使用 mac 系統</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install hugo
+</code></pre></div><h4 id="參考資料">參考資料</h4>
+<p><a href="https://gohugo.io/getting-started/installing/#homebrew-macos">https://gohugo.io/getting-started/installing/#homebrew-macos</a></p>
+<blockquote>
+<p>檢查hugo版本</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo version
+</code></pre></div><blockquote>
+<p>新建一個靜態網頁[myblog]，在本地目錄中的content資料夾新建</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new site myblog
+</code></pre></div><blockquote>
+<p>安裝themes (需再根目錄, 在此是資料夾[myblog])，theme在<a href="https://themes.gohugo.io/">官方主題頁面</a>挑選</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
+</code></pre></div><blockquote>
+<p>本地啟動靜態網頁 (需再根目錄, 在此是資料夾[myblog])</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server -t m10c --buildDrafts
+</code></pre></div><blockquote>
+<p>建立html網頁資料, 會再跟目錄的public資料夾 (需再根目錄, 在此是資料夾[myblog])</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo --theme<span style="color:#f92672">=</span>m10c --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://gavin-yeh.github.io/&#34;</span> --buildDrafts
+</code></pre></div><blockquote>
+<p>把public資料夾全部提交到你自己的git上 (需再根目錄, 在此是資料夾[myblog])</p>
+</blockquote>
+<pre tabindex="0"><code class="language-git" data-lang="git">git init
+git add .
+git commit -m &quot;blog的第一次提交&quot;
+git remote add origin https:// github.com/gavin-yeh/gavin-yeh.github.io.git
+git push -u grigin master
+</code></pre><hr>
+<h2 id="別人網頁好漂亮我要怎麼知道他使用哪種內容管理系統">別人網頁好漂亮，我要怎麼知道他使用哪種內容管理系統</h2>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">CMS</a> 是內容管理系統</p>
+<p>在google搜尋 <code>CMS detector</code> ，可以知道當前網頁所使用的CMS，可以找到很多detector網站框架檢驗工具</p>
+<h2 id="參考資料-1">參考資料</h2>
+<h3 id="官方hugo安裝教學">官方hugo安裝教學</h3>
+<ul>
+<li><a href="https://www.gohugo.org/doc/tutorials/installing-on-windows/">在 Windows 上安装 Hugo</a></li>
+</ul>
+<h3 id="hugo-教學網站">hugo 教學網站</h3>
+<ul>
+<li><a href="https://blog.yowko.com/windows-10-hugo/">在 Windows 10 中建置 Hugo 開發環境</a></li>
+<li><a href="https://blog.jln.co/%E7%94%A8Hugo-GitHub-Actions%E6%89%93%E9%80%A0Blog/">用Hugo + GitHub Actions打造Blog</a></li>
+</ul>
+<h3 id="hugo建置教學">hugo建置教學</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=pOJS1O9J6gA">使用Github写博客 - 亲测非常实用</a></li>
+<li><a href="https://www.youtube.com/watch?v=J7XQ2FeTHLg">手把手教你从0开始搭建自己的个人博客 |第二种姿势 | hugo</a></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

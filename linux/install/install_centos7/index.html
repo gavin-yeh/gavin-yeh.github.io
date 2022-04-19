@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>安裝 centos 7 (linux) // Gavin 的程式 Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://gavin-yeh.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="安裝 centos 7 (linux)"/>
+<meta name="twitter:description" content="安裝 centos 7 (linux)  linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範
+ 開啟虛擬機後會出現以下界面  Install CentOS 7：安裝CentOS 7 Test this media &amp; install CentOS 7：測試安裝文件並安裝CentOS 7 Troubleshooting：修復故障  選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue 設置時間 選擇時區，查看時間是否正確。然後點擊Done 選擇需要安裝的軟件 選擇 Server with Gui，然後點擊Done  預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop  選擇安裝位置，在這裡可以進行磁盤劃分 選擇i wil configure partitioning（我將會配置分區），然後點擊done 如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add 然後以同樣的辦法給其他三個區分配好空間後點擊Done 然后会弹出摘要信息，点击AcceptChanges(接受更改) 設置主機名與網卡信息 首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。 最後選擇Begin Installation(開始安裝) 設置root密碼 設置root密碼後點擊Done 點擊USER CREATION 創建管理員用戶 輸入用戶名密碼後點擊Done 等待系統安裝完畢重啟系統 "/>
+
+    <meta property="og:title" content="安裝 centos 7 (linux)" />
+<meta property="og:description" content="安裝 centos 7 (linux)  linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範
+ 開啟虛擬機後會出現以下界面  Install CentOS 7：安裝CentOS 7 Test this media &amp; install CentOS 7：測試安裝文件並安裝CentOS 7 Troubleshooting：修復故障  選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue 設置時間 選擇時區，查看時間是否正確。然後點擊Done 選擇需要安裝的軟件 選擇 Server with Gui，然後點擊Done  預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop  選擇安裝位置，在這裡可以進行磁盤劃分 選擇i wil configure partitioning（我將會配置分區），然後點擊done 如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add 然後以同樣的辦法給其他三個區分配好空間後點擊Done 然后会弹出摘要信息，点击AcceptChanges(接受更改) 設置主機名與網卡信息 首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。 最後選擇Begin Installation(開始安裝) 設置root密碼 設置root密碼後點擊Done 點擊USER CREATION 創建管理員用戶 輸入用戶名密碼後點擊Done 等待系統安裝完畢重啟系統 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gavin-yeh.github.io/linux/install/install_centos7/" /><meta property="article:section" content="linux" />
+<meta property="article:published_time" content="2020-10-20T15:17:13+08:00" />
+<meta property="article:modified_time" content="2020-10-20T15:17:13+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://gavin-yeh.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Gavin 的程式 Blog</h1>
+      <p>從零開始成為程式高手</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">安裝 centos 7 (linux)</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Oct 20, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h3 id="安裝-centos-7-linux">安裝 centos 7 (linux)</h3>
+<blockquote>
+<p>linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範</p>
+</blockquote>
+<h4 id="開啟虛擬機後會出現以下界面">開啟虛擬機後會出現以下界面</h4>
+<ol>
+<li>Install CentOS 7：安裝CentOS 7</li>
+<li>Test this media &amp; install CentOS 7：測試安裝文件並安裝CentOS 7</li>
+<li>Troubleshooting：修復故障</li>
+</ol>
+<p><img src="./images/install_linux_1.png" alt=""></p>
+<h4 id="選擇安裝過程中使用的語言這裡選擇英文鍵盤選擇美式鍵盤點擊continue">選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue</h4>
+<p><img src="./images/install_linux_2.png" alt=""></p>
+<h4 id="設置時間">設置時間</h4>
+<p><img src="./images/install_linux_3.png" alt=""></p>
+<h4 id="選擇時區查看時間是否正確然後點擊done">選擇時區，查看時間是否正確。然後點擊Done</h4>
+<p><img src="./images/install_linux_4.png" alt=""></p>
+<h4 id="選擇需要安裝的軟件">選擇需要安裝的軟件</h4>
+<p><img src="./images/install_linux_5.png" alt=""></p>
+<h4 id="選擇-server-with-gui然後點擊done">選擇 Server with Gui，然後點擊Done</h4>
+<ul>
+<li>預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop</li>
+</ul>
+<p><img src="./images/install_linux_6.png" alt=""></p>
+<h4 id="選擇安裝位置在這裡可以進行磁盤劃分">選擇安裝位置，在這裡可以進行磁盤劃分</h4>
+<p><img src="./images/install_linux_7.png" alt=""></p>
+<h4 id="選擇i-wil-configure-partitioning我將會配置分區然後點擊done">選擇i wil configure partitioning（我將會配置分區），然後點擊done</h4>
+<p><img src="./images/install_linux_8.png" alt=""></p>
+<h4 id="如下圖所示點擊加號選擇boot給boot分區分200m最後點擊add">如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add</h4>
+<p><img src="./images/install_linux_9.png" alt=""></p>
+<h4 id="然後以同樣的辦法給其他三個區分配好空間後點擊done">然後以同樣的辦法給其他三個區分配好空間後點擊Done</h4>
+<p><img src="./images/install_linux_10.png" alt=""></p>
+<h4 id="然后会弹出摘要信息点击acceptchanges接受更改">然后会弹出摘要信息，点击AcceptChanges(接受更改)</h4>
+<p><img src="./images/install_linux_11.png" alt=""></p>
+<h4 id="設置主機名與網卡信息">設置主機名與網卡信息</h4>
+<p><img src="./images/install_linux_12.png" alt=""></p>
+<h4 id="首先要打開網卡然後查看是否能獲取到ip地址我這裡是橋接再更改主機名後點擊done">首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。</h4>
+<p><img src="./images/install_linux_13.png" alt=""></p>
+<h4 id="最後選擇begin-installation開始安裝">最後選擇Begin Installation(開始安裝)</h4>
+<p><img src="./images/install_linux_14.png" alt=""></p>
+<h4 id="設置root密碼">設置root密碼</h4>
+<p><img src="./images/install_linux_15.png" alt=""></p>
+<h4 id="設置root密碼後點擊done">設置root密碼後點擊Done</h4>
+<p><img src="./images/install_linux_16.png" alt=""></p>
+<h4 id="點擊user-creation-創建管理員用戶">點擊USER CREATION 創建管理員用戶</h4>
+<p><img src="./images/install_linux_17.png" alt=""></p>
+<h4 id="輸入用戶名密碼後點擊done">輸入用戶名密碼後點擊Done</h4>
+<p><img src="./images/install_linux_18.png" alt=""></p>
+<h4 id="等待系統安裝完畢重啟系統">等待系統安裝完畢重啟系統</h4>
+<p><img src="./images/install_linux_19.png" alt=""></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

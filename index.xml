@@ -1,23 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://https://gavin-yeh.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Gavin 的程式 Blog</title>
+    <link>https://gavin-yeh.github.io/</link>
+    <description>Recent content on Gavin 的程式 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Nov 2019 23:17:13 +0800</lastBuildDate>
-    
-	<atom:link href="https://https://gavin-yeh.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 20 Oct 2020 15:17:13 +0800</lastBuildDate><atom:link href="https://gavin-yeh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>https://gavin-yeh.github.io/golang/notion/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/golang/notion/</guid>
+      <description>golang golang 為 go language 的簡寫
+golang 的核心應用領域  BT(區塊鏈)應用 服務端（後端）的開發/遊戲軟件開發 分布式/雲計算研發  golang 的優勢  數據處理（計算能力） 大併發 數據通道  golang 簡介 來歷 很久以前，有一個IT公司，這公司有個傳統，允許員工擁有20%自由時間來開發實驗性項目。在2007的某一天，公司的幾個大牛，正在用c++開發一些比較繁瑣但是核心的工作，主要包括龐大的分佈式集群，大牛覺得很鬧心，後來c++委員會來他們公司演講，說c++將要添加大概35種新特性。這幾個大牛的其中一個人，名為：Rob Pike，聽後心中一萬個xxx飄過，“c++特性還不夠多嗎？簡化c++應該更有成就感吧”。於是乎，Rob Pike和其他幾個大牛討論了一下，怎麼解決這個問題，過了一會，Rob Pike說要不我們自己搞個語言吧，名字叫“go”，非常簡短，容易拼寫。其他幾位大牛就說好啊，然後他們找了塊白板，在上面寫下希望能有哪些功能（詳見文尾）。接下來的時間裡，大牛們開心的討論設計這門語言的特性，經過漫長的歲月，他們決定，以c語言為原型，以及借鑒其他語言的一些特性，來解放程序員，解放自己，然後在2009年，go語言誕生。
+思想 Less can be more 大道至簡,小而蘊真 讓事情變得複雜很容易，讓事情變得簡單才難 深刻的工程文化
+優點 自帶gc。 靜態編譯，編譯好後，扔服務器直接運行。 簡單的思想，沒有繼承，多態，類等。 豐富的庫和詳細的開發文檔。 語法層支持並發，和擁有同步並發的channel類型，使並發開髮變得非常方便。 簡潔的語法，提高開發效率，同時提高代碼的閱讀性和可維護性。 超級簡單的交叉編譯，僅需更改環境變量。 （花了我兩天時間編譯一個imagemagick到arm平台） 內含完善、全面的軟件工程工具。 Go語言自帶的命令和工具相當地強大。通過它們，我們可以很輕鬆地完成Go語言程序的獲取、編譯、測試、安裝、運行、運行分析等一系列工作，這幾乎涉及了開發和維護一個軟件的所有環節。
+Go 語言是谷歌 2009 年首次推出並在 2012 年正式發布的一種全新的編程語言，可以在不損失應用程序性能的情況下降低代碼的複雜性。谷歌首席軟件工程師羅布派克(Rob Pike)說：我們之所以開發 Go，是因為過去10多年間軟件開發的難度令人沮喪。 Google 對 Go 寄予厚望，其設計是讓軟件充分發揮多核心處理器同步多工的優點，並可解決面向對象程序設計的麻煩。它具有現代的程序語言特色，如垃圾回收，幫助開發者處理瑣碎但重要的內存管理問題。 Go 的速度也非常快，幾乎和 C 或 C++ 程序一樣快，且能夠快速開發應用程序。 Go語言的主要特徵：
+1. 自動立即回收。 1. 更豐富的內置類型。 1. 函數多返回值。 1.</description>
+    </item>
     
     <item>
-      <title>Gavin 的 Blog</title>
-      <link>https://https://gavin-yeh.github.io/post/blog/</link>
-      <pubDate>Mon, 25 Nov 2019 23:17:13 +0800</pubDate>
+      <title>linux 系統中如何修改環境變量</title>
+      <link>https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
       
-      <guid>https://https://gavin-yeh.github.io/post/blog/</guid>
-      <description></description>
+      <guid>https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/</guid>
+      <description>linux 系統中如何修改環境變量 shell 的週期  用戶登入到 linux 系統後，系統將啟動一個用戶的 shell，在這個 shell 中，可以使用 shell 命令或聲明變量，也可以創建並運行 shell 腳本程序 運行 shell 腳本時，如果使用 sh/bash 指令，系統將創建一個子 shell。此時，系統中將有兩個 shell，一個是登入時系統的 shell，另一個是系統為了運行腳本程序創建的 shell  當一個腳本程序運行完畢，他的腳本將中止，可以返回到該腳本之前的 shell 用戶可以有很多 shell，每個 shell 都是有某個 shell（稱為父 shell）派生  shell 並非一個個終端(terminal)，在一個終端當中，可以開很多 shell
+環境變量的週期  在 shell 中執行時，會提供一組環境變量 當子 shell 中定義的變量只在該子 shell 內有效，如果在一個 shell 腳本程序中定義了一個變量，當該腳本程序運行時，這定義只在該腳本程序內的一個局部變量，其他的 shell 不能引用它 要使某個變量的值可以在其他 shell 中被改變，可以使用 export 命令對已定義的變量進行輸出。export 命令將使系統在創建每一新的 shell 時定義這個變量的一個拷貝。這個過程稱為變量輸出  shell 與環境變量  export 指令將自定義變量變成環境變量 執行腳本時，會開啟一個子 shell 環境，將父 shell 的系統變量複製到子 shell，不會複製父 shell 的自定義變量 子 shell 中定義的系統變量，不能在父 shell 中訪問  在 Ubuntu 中有如下幾個檔案可以設定環境變數  /etc/profile: 在登入時，作業系統定製使用者環境時使用的第一個檔案，此檔案為系統的每個使用者設定環境資訊，當用戶第一次登入時，該檔案被執行 /etc/environment: 在登入時，作業系統使用的第二個檔案，系統在讀取用戶的 profile 前，設定環境檔案的環境變數 ~/.</description>
+    </item>
+    
+    <item>
+      <title>安裝 centos 7 (linux)</title>
+      <link>https://gavin-yeh.github.io/linux/install/install_centos7/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/linux/install/install_centos7/</guid>
+      <description>安裝 centos 7 (linux)  linux 有很多作業系統的版本，在這裡我用 centos 7.7 作為示範
+ 開啟虛擬機後會出現以下界面  Install CentOS 7：安裝CentOS 7 Test this media &amp;amp; install CentOS 7：測試安裝文件並安裝CentOS 7 Troubleshooting：修復故障  選擇安裝過程中使用的語言，這裡選擇英文、鍵盤選擇美式鍵盤。點擊Continue 設置時間 選擇時區，查看時間是否正確。然後點擊Done 選擇需要安裝的軟件 選擇 Server with Gui，然後點擊Done  預設最小安裝沒有圖形桌面，也可選擇 GNOME desktop  選擇安裝位置，在這裡可以進行磁盤劃分 選擇i wil configure partitioning（我將會配置分區），然後點擊done 如下圖所示，點擊加號，選擇/boot，給boot分區分200M。最後點擊Add 然後以同樣的辦法給其他三個區分配好空間後點擊Done 然后会弹出摘要信息，点击AcceptChanges(接受更改) 設置主機名與網卡信息 首先要打開網卡，然後查看是否能獲取到IP地址(我這裡是橋接)，再更改主機名後點擊Done。 最後選擇Begin Installation(開始安裝) 設置root密碼 設置root密碼後點擊Done 點擊USER CREATION 創建管理員用戶 輸入用戶名密碼後點擊Done 等待系統安裝完畢重啟系統 </description>
+    </item>
+    
+    <item>
+      <title>學習一門技術，看見進度條，從新手到大師</title>
+      <link>https://gavin-yeh.github.io/learning/%E5%A6%82%E4%BD%95%E5%AD%B8%E7%BF%92%E4%B8%80%E9%96%80%E6%8A%80%E8%A1%93/</link>
+      <pubDate>Sun, 14 Jun 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/learning/%E5%A6%82%E4%BD%95%E5%AD%B8%E7%BF%92%E4%B8%80%E9%96%80%E6%8A%80%E8%A1%93/</guid>
+      <description>為什麼需要學習如何學習一門技術 在學習一門技術，尤其是再程式領域中的技術，有太多的領域，沒有學習完的一天，而對於一個新手來說，一門技術就要耗費很多的時間，當我們看到什麼都會的大神時，也不免會疑問，「怎麼可能學會這麼多東西」
+尤其是像我一樣半路出家，不完全資訊本科科出生（電機系），在面對浩瀚的知識中，也曾經一臉矇，慢慢摸爬捆打下，才站穩腳跟
+而在實際工作中，需要快速掌握一門技術，所以總結一個學習方法，才是有效率的做法
+新手到大師的路徑 下圖為一門技術當中，成為大師的路徑，看起來像一個漏斗
+ 橫向廣度的表現是對整個技術的整體架構感，這部份不用花很多的時間變可以掌握 縱向深度的表現是很多很多的細節，是體現一個工程師水平的地方，越深表示實力越好  1. 了解新技術是要解決怎樣的問題  我們看一下新技術的誕生過程，這可以幫助我們知道為何了解新技術解決了怎樣的問題是重要的
+ 新技術的誕生  新的需求，讓我們在開發專案時，要解決一個問題 先看看現有技術能否解決問題 使用傳統方法，但是不夠好 發展出新技術  我們可以看到，新技術之所以出現，源頭是為了要解決新的需求，也就是要解決某個特定的問題，所以在學新技術時的第一步，就是要知道它要解決怎樣的問題，這對於我們學習有打地基一般的作用
+在很多課程或書籍的開頭，有時候會提及一些發展歷史，幫助我們了解，而有時候只是累贅
+2. 了解新技術的知識  可以快速上手，但這裡不涉及技術細節，在這裡很多人被琳瑯滿目的技術細節弄的眼花撩亂，卻無法真正吸收到知識，在這個階段要丟棄所有細節，才能最有效率的學習，不耽誤時間
+  運作原理 基本語法 基本使用方式   對基本知識到一定的了解，會有對技術的框架感，這在之後研究技術細節時，才會在這個基本框架上往上蓋
+ 3. 研究新技術的細節  體現一個工程師的水平的地方，範圍非常的廣，這也是資深工程師優勢所在
+  怎麼使用更加規範 使用陷阱 需要使用時，要注意甚麼  &amp;hellip;等等更多方面
+4. 更多更深的細節，直到有一天成為大師  技術入門的方針  以上路徑，只要順序錯誤，就容易會讓學習卡關，變得緩慢，總結以下方針，提高學習效率
+  先建立一個整體框架，然後才研究細節 整體框架是掌握了『2. 了解新技術的知識』，所以要加快學習速度，需要排除掉所有細節 先 know how，在 know why，先知道怎樣用，在知道運作原理，很多 know why 都是在討論技術的細節 取得通俗易懂的教材，讓學習的過程高效且愉快，如果教材梯難度太高，很容易卡住，影響情緒也效率不高 程式語言是做中學的科學，不是會再做，而是做了才會 學習程式是在琢磨別人怎麼做，不是我認為應該怎麼做     </description>
+    </item>
+    
+    <item>
+      <title>在 windows 中透過構建虛擬機使用 linux 系統</title>
+      <link>https://gavin-yeh.github.io/vm/</link>
+      <pubDate>Wed, 15 Jan 2020 15:03:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/vm/</guid>
+      <description>為什麼需要虛擬機？  我們從小到大都在使用 windows 的作業系統，但在程式開發時，各大公司或團隊最常使用的是 linux 系統，這時就可以用虛擬機，在 windows 中，建立一台虛擬機，然後虛擬機上是 linux 系統，可以用來進行學習與培訓
+ VMware Workstation Player 免費的虛擬機軟體，是VMware Workstation（付費版本）的精簡版，安裝VMware Workstation Player之後，可以在你的電腦新增多部的虛擬機器（或稱「虛擬電腦」），在虛擬機器中可以安裝不同的作業系統，例如：Windows、Linux&amp;hellip;等；也可以安裝任何的軟體，就好像在使用實體電腦一樣。
+下載 連結到官方網站，點選「下載」，選擇「免費產品下載」的「Workstation Player」 對著Windows的安裝版本，點選「立即下載」；如果你的作業系統是Linux，就下載適用於Linux的版本 下載完成以後，開啟檔案總管，對著下載的檔案連續按兩下滑鼠左鍵，準備進行安裝。 安裝 點選「Next」 選擇「I accept the terms in the License Agreement.」，點選「Next」。 勾選「Enhanced Keyboard Driver」，點選「Next」。 使用預設的選項，點選「Next」。如果你不想協助改善軟體就取消勾選「Join the VMware Customer Experience Improvement Program」。 使用預設選項，建立桌面捷徑與開始程式資料夾，點選「Next」。 點選「Install」。 正在安裝VMware Workstation Player。 安裝完成，點選「Finish」。 點選「Yes」，重新開機。 第一次啟動 對著桌面的捷徑圖示，連續按兩下滑鼠左鍵，開啟VMware Workstation 15 Player。 使用預設的選項，點選「Continue」，使用免費版本。 點選「Finish」。 建立虛擬機 VMware Workstation 15 Player開啟的視窗如圖示，點選「Create a New Virtual Machine」，可以建立虛擬機器，並在虛擬機器上安裝作業系統。 選擇稍後安裝作業系統，然後點擊「下一步」 選擇作業系統與作業系統版本，然後點擊「下一步」 可以修改虛擬機名稱與安裝路徑，然後點擊「下一步」 可以修改磁盤容量大小，並選擇虛擬磁盤儲存為單個文件，然後點擊「下一步」 &amp;gt; 拆分磁盤後，可以更輕鬆的在計算機之間移動虛擬機，但可能會降低大容量磁盤的性能 點擊「完成」 點擊「編輯虛擬機設定」 在此介面可以自定義內存、CPU等大小，然後選中新CD/DVD，選擇剛才下載的鏡像文件，然後點擊「關閉」 使用 ISO 映像檔，並選擇檔案位置，點擊「完成」  linux 7 ISO 映像檔下載位置  常見問題 滑鼠不見了怎麼辦？ ctrl + alt</description>
+    </item>
+    
+    <item>
+      <title>使用 hugo &#43; github 打造自己的 blog</title>
+      <link>https://gavin-yeh.github.io/hugo/</link>
+      <pubDate>Wed, 27 Nov 2019 23:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/hugo/</guid>
+      <description>要如何簡單搭建一個自己的部落格呢  相信每個工程師都有想過搭建自己的部落格，隨著技術越來越成熟，第三方提供的套件越來越方便
+ 兩種網頁：靜態網頁與動態網頁 靜態網頁 靜態網頁：編輯好的網頁推送上機器後就靜止不變，所以在構建靜態網頁時，只是單純的在編輯網頁內容，沒有後台，所以不會有資料庫、後台管理頁面&amp;hellip;等等，例如寫了一篇部落格，就需要更新
+ 好處：架構簡單，容易維護 壞處： 架構限制難以新增功能 適合構建簡單網頁  靜態第三方框架  hugo：基於golang語言的部落格框架 hexo jekyllrb VuePress solo  動態網頁 動態網頁：在已設計好的架構下，可以動態的更新網頁，通常在網頁中，要新增一個頁面或文章，只要在後台添加就可以了，內容儲存在資料庫，可以動態的讀取出來，所以設計好的網站架構不需要更改
+ 好處：有完整後台與資料庫，架構允許加入網頁的特殊功能，例如：購物車，論壇&amp;hellip;等 壞處： 架構複雜，不易學習與理解 適合完整且複雜網頁  動態第三方框架   WordPress：是全球最流行的內容管理系統，目前全世界超過 33% 以上的網站都是使用 WordPress 建立的，支持相當多的外掛插件
+  WordPress 具有非常龐大的志願者社區，由於開源的特性，讓許多能人志士能夠無償的建立與維護 WordPress 這套系統
+   安裝hugo 使用 windows 系統
+ 安裝hugo，在這使用windows包管理器 : Chocolatey，可簡單的使用一行的語法安裝軟件
+ choco install hugo 使用 mac 系統
+brew install hugo 參考資料 https://gohugo.io/getting-started/installing/#homebrew-macos
+ 檢查hugo版本
+ hugo version  新建一個靜態網頁[myblog]，在本地目錄中的content資料夾新建</description>
     </item>
     
   </channel>

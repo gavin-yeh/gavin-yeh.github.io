@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://https://gavin-yeh.github.io/post/blog/</loc>
-    <lastmod>2019-11-25T23:17:13+08:00</lastmod>
+    <loc>https://gavin-yeh.github.io/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/golang/notion/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/golang/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/linux/linux-%E7%B3%BB%E7%B5%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/linux/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/linux/install/install_centos7/</loc>
+    <lastmod>2020-10-20T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/learning/</loc>
+    <lastmod>2020-06-14T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/learning/%E5%A6%82%E4%BD%95%E5%AD%B8%E7%BF%92%E4%B8%80%E9%96%80%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2020-06-14T15:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/vm/</loc>
+    <lastmod>2020-01-15T15:03:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/hugo/</loc>
+    <lastmod>2019-11-27T23:17:13+08:00</lastmod>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/categories/</loc>
+  </url><url>
+    <loc>https://gavin-yeh.github.io/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://https://gavin-yeh.github.io/</loc>
-    <lastmod>2019-11-25T23:17:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://https://gavin-yeh.github.io/post/</loc>
-    <lastmod>2019-11-25T23:17:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://https://gavin-yeh.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://https://gavin-yeh.github.io/tags/</loc>
-  </url>
-  
 </urlset>

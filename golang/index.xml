@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golangs on Gavin 的程式 Blog</title>
+    <link>https://gavin-yeh.github.io/golang/</link>
+    <description>Recent content in Golangs on Gavin 的程式 Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Oct 2020 15:17:13 +0800</lastBuildDate><atom:link href="https://gavin-yeh.github.io/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>https://gavin-yeh.github.io/golang/notion/</link>
+      <pubDate>Tue, 20 Oct 2020 15:17:13 +0800</pubDate>
+      
+      <guid>https://gavin-yeh.github.io/golang/notion/</guid>
+      <description>golang golang 為 go language 的簡寫
+golang 的核心應用領域  BT(區塊鏈)應用 服務端（後端）的開發/遊戲軟件開發 分布式/雲計算研發  golang 的優勢  數據處理（計算能力） 大併發 數據通道  golang 簡介 來歷 很久以前，有一個IT公司，這公司有個傳統，允許員工擁有20%自由時間來開發實驗性項目。在2007的某一天，公司的幾個大牛，正在用c++開發一些比較繁瑣但是核心的工作，主要包括龐大的分佈式集群，大牛覺得很鬧心，後來c++委員會來他們公司演講，說c++將要添加大概35種新特性。這幾個大牛的其中一個人，名為：Rob Pike，聽後心中一萬個xxx飄過，“c++特性還不夠多嗎？簡化c++應該更有成就感吧”。於是乎，Rob Pike和其他幾個大牛討論了一下，怎麼解決這個問題，過了一會，Rob Pike說要不我們自己搞個語言吧，名字叫“go”，非常簡短，容易拼寫。其他幾位大牛就說好啊，然後他們找了塊白板，在上面寫下希望能有哪些功能（詳見文尾）。接下來的時間裡，大牛們開心的討論設計這門語言的特性，經過漫長的歲月，他們決定，以c語言為原型，以及借鑒其他語言的一些特性，來解放程序員，解放自己，然後在2009年，go語言誕生。
+思想 Less can be more 大道至簡,小而蘊真 讓事情變得複雜很容易，讓事情變得簡單才難 深刻的工程文化
+優點 自帶gc。 靜態編譯，編譯好後，扔服務器直接運行。 簡單的思想，沒有繼承，多態，類等。 豐富的庫和詳細的開發文檔。 語法層支持並發，和擁有同步並發的channel類型，使並發開髮變得非常方便。 簡潔的語法，提高開發效率，同時提高代碼的閱讀性和可維護性。 超級簡單的交叉編譯，僅需更改環境變量。 （花了我兩天時間編譯一個imagemagick到arm平台） 內含完善、全面的軟件工程工具。 Go語言自帶的命令和工具相當地強大。通過它們，我們可以很輕鬆地完成Go語言程序的獲取、編譯、測試、安裝、運行、運行分析等一系列工作，這幾乎涉及了開發和維護一個軟件的所有環節。
+Go 語言是谷歌 2009 年首次推出並在 2012 年正式發布的一種全新的編程語言，可以在不損失應用程序性能的情況下降低代碼的複雜性。谷歌首席軟件工程師羅布派克(Rob Pike)說：我們之所以開發 Go，是因為過去10多年間軟件開發的難度令人沮喪。 Google 對 Go 寄予厚望，其設計是讓軟件充分發揮多核心處理器同步多工的優點，並可解決面向對象程序設計的麻煩。它具有現代的程序語言特色，如垃圾回收，幫助開發者處理瑣碎但重要的內存管理問題。 Go 的速度也非常快，幾乎和 C 或 C++ 程序一樣快，且能夠快速開發應用程序。 Go語言的主要特徵：
+1. 自動立即回收。 1. 更豐富的內置類型。 1. 函數多返回值。 1.</description>
+    </item>
+    
+  </channel>
+</rss>
